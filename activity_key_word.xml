@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KeyWordActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:background="#FFE691AF"
+            android:gravity="center"
+            android:text="DATAR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/MainTItleTextView3"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" android:textSize="30sp"
+            android:textStyle="bold" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:clickable="true"/>
+        <Spinner
+            android:layout_width="28dp"
+            android:layout_height="26dp" android:id="@+id/keywordSpinner"
+            android:background="@drawable/listwhite"
+            app:layout_constraintEnd_toEndOf="@+id/MainTItleTextView3"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="4dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:text="로그인"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/MainLoginTextView3"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="@+id/MainTItleTextView3"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:clickable="true" android:textSize="18sp"/>
+        <TextView
+            android:layout_width="22dp"
+            android:layout_height="22dp" android:id="@+id/homeButton3"
+            app:layout_constraintStart_toEndOf="@+id/MainLoginTextView3" android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp" android:background="@drawable/homewhite"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+    <TextView
+        android:text="명칭으로 검색하기"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:id="@+id/keywordTitleTextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" android:textSize="24sp"
+        android:textStyle="bold" android:layout_margin="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/locationAreaCodeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/spinner" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        tools:layout_editor_absoluteY="157dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="104dp"
+            android:layout_height="103dp"
+            android:layout_marginStart="292dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="Microinteraction.json"
+            app:lottie_loop="true" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="327dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="-2dp">
+
+            <EditText
+                android:id="@+id/keywordEditText"
+                android:layout_width="294dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_style"
+                android:ems="10"
+                android:hint="명칭을 입력하세요."
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view_keyword"/>
+</LinearLayout>
